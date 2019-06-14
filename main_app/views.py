@@ -7,6 +7,30 @@ from django.contrib.auth.forms import UserCreationForm
 def home(request):
   return HttpResponse('<h1>Hello</h1>')
 
+def bakes_detail(request):
+  return render(request, 'bakes/detail.html') 
+
+def fermentations_detail(request):
+  return render(request, 'fermentations/detail.html')
+
+def leavens_detail(request):
+  return render(request, 'leavens/detail.html')
+
+def mixes_detail(request):
+  return render(request, 'mixes/detail.html')
+
+def shapes_detail(request):
+  return render(request, 'shapes/detail.html')
+
+def starters_detail(request):
+  return render(request, 'starters/detail.html')
+
+def trackers_index(request):
+  return render(request, 'trackers/detail.html')
+
+def tools(request):
+    return render(request, 'tool.html')
+
 def signup(request):
   error_message = ''
   if request.method == 'POST':
