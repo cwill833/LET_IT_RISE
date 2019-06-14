@@ -5,7 +5,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 
 def home(request):
-  return HttpResponse('<h1>Hello</h1>')
+  return render(request, 'home.html')
 
 def bakes_detail(request):
   return render(request, 'bakes/detail.html') 
