@@ -29,7 +29,7 @@ def trackers_index(request):
   return render(request, 'trackers/detail.html')
 
 def tools(request):
-    return render(request, 'tool.html')
+  return render(request, 'tools.html')
 
 def signup(request):
   error_message = ''
