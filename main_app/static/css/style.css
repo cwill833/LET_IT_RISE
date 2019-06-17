@@ -4,8 +4,12 @@
 }
 
 hr{
-    width: 100px;
+    width: 13vw;
     border-color: #45510D;
+}
+
+#top-line{
+    width: 22vw;
 }
 
 h1, h2, p, h6{
