@@ -189,3 +189,80 @@ h3.started, h3.intro{
     display: flex;
     justify-content: space-around;
 }
+
+.top-sect-day1, .top-sect-day2{
+    display: flex;
+
+}
+.step1, .media, .step2, .example-container{
+    margin-top: 25px;
+}
+.step1, .step2{
+    margin-left: 25px;
+    width: 60px;
+}
+
+.media{
+    width: 250px;
+    height: 150px;
+    background-color: aqua;
+}
+
+.bottom-sect-day1{
+    display: flex;
+    flex-direction: column;
+    background-color: #F5E1CB;
+
+}
+
+.step1-text{
+    width: 250px;
+    margin-left: 85px;
+    margin-top: 25px;
+}
+
+.step1-last{
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.example-container{
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.examples{
+    width: 75px;
+    height: 75px;
+    background-color: aqua;
+}
+
+.button {
+    border-top: 1px solid #45510d;
+    background: #45510d;
+    padding: 14px 28px;
+    border-radius: 12px;
+    box-shadow: rgba(0,0,0,1) 0 1px 0;
+    text-shadow: rgba(0,0,0,.4) 0 1px 0;
+    color: white;
+    font-size: 16px;
+    font-family: "Helvetica";
+    text-decoration: none;
+    vertical-align: middle;
+    width: 100px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:active {
+    border-top-color: #282b19;
+    background: #282b19;
+}
+
+.button a{
+    color: white;
+}

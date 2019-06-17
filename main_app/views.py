@@ -22,8 +22,11 @@ def mixes_detail(request):
 def shapes_detail(request):
   return render(request, 'shapes/detail.html')
 
-def starters_detail(request):
-  return render(request, 'starters/detail.html')
+def starters1(request):
+  return render(request, 'starters/dayone.html')
+
+def starters2(request):
+  return render(request, 'starters/daytwo.html')
 
 def trackers_index(request):
   return render(request, 'trackers/detail.html')
