@@ -124,6 +124,10 @@ footer{
     align-items: flex-end;
 }
 
+#term{
+    padding-right: 20px;
+}
+
 li a {
     color: #45510D;
     font-size: 12px;
