@@ -157,9 +157,12 @@ h3.started, h3.intro{
     margin-left: 20px;
 }
 
-.about{
+.about, .process{
     height: 200px;
     width: 375px;
+    
+}
+.about{
     background-color: #F5E1CB;
 }
 
@@ -172,4 +175,16 @@ h3.started, h3.intro{
 
 #about_us{
     margin-top: 20px;
+}
+
+.icon1, .icon2, .icon3, .icon4{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: aqua;
+} 
+
+.process-icon, .process-list{
+    display: flex;
+    justify-content: space-around;
 }
