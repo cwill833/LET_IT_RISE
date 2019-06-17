@@ -137,3 +137,39 @@ li a {
     color: #3A3434;
     font-size: 16px;
 }
+
+.landing-photo{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    background-image: url(https://i.imgur.com/Pf9zDDW.jpg);
+    background-repeat: no-repeat;
+    background-size: 455px 250px;
+    justify-content: flex-end;
+}
+
+.wrap{
+    width: 160px;
+}
+
+h3.started, h3.intro{
+    margin-bottom: 25px;
+    margin-left: 20px;
+}
+
+.about{
+    height: 200px;
+    width: 375px;
+    background-color: #F5E1CB;
+}
+
+.inside-about{
+    width: 259px;
+    margin-left: 50px;
+    padding-top: 30px;
+    font-size: 12px;
+}
+
+#about_us{
+    margin-top: 20px;
+}
