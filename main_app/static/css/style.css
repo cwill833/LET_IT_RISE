@@ -8,14 +8,21 @@ hr{
     border-color: #45510D;
 }
 
-h1{
+h1, h2, p, h6{
     font-family: 'Helvetica';
+}
+
+h3, h6{
+    font-weight: 300;
 }
 
 ul{
     list-style-type: none;
 }
 
+a{
+    text-decoration: none;
+}
 nav{
     height: 75px;
     background-color: #F6F8F2;
@@ -34,10 +41,12 @@ footer{
     background: -moz-linear-gradient(top, #B4BA9A, #F6F8F2);
     background: -ms-linear-gradient(top, #B4BA9A, #F6F8F2);
     background: -o-linear-gradient(top, #B4BA9A, #F6F8F2);
-    height: 300px;
+    height: 140px;
     width: 100vw;
     display: flex;
     flex-direction: column;
+    font-family: 'Helvetica';
+    color: #45510D;
 }
 
 .icon, .started{
@@ -57,6 +66,7 @@ footer{
 .started{
     width: 100px;
     margin-right: 25px;
+    font-weight: 200;
 }
 
 .middle{
@@ -77,4 +87,45 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.links{
+    padding-left: 10px;
+    width: 83vw;
+    height: 50vh;
+    padding-top: 15px;
+    /* background-color: greenyellow; */
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+
+}
+
+.social{
+    width: 100vw;
+    height: 40vh;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rights{
+    padding-left: 10px;
+    width: 100vw;
+    height: 10vh;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+li a {
+    color: #45510D;
+    font-size: 12px;
+}
+
+.span1{
+    color: #3A3434;
+    font-size: 16px;
 }
