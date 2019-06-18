@@ -4,3 +4,43 @@ from django.urls import reverse
 from datetime import date
 
 # Create your models here.
+class Progress(models.Model):
+    page = models.CharField(max_length=200)
+
+class Comment(models.Model):
+    description = models.TextField(max_length=250)
+
+class Starter(models.Model):
+    name = models.CharField(max_length=100)
+    start = models.DateField('start date')
+    time = models.CharField(max_length=200)
+    ratio = models.CharField(max_length=200)
+    temp = models.CharField(max_length=100)
+        
+    def __str__(self):
+        return self.start
+
+class Leaven(models.Model):
+    start = models.DateField('start date')
+    time = models.CharField(max_length=200)
+    temp = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.start
+
+class Rise(models.Model):
+    start = models.DateField('start date')
+    time = models.CharField(max_length=200)
+    temp = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.start
+
+class Bake(models.Model):
+    start = models.DateField('start date')
+    temp = models.CharField(max_length=100)
+    lid_on = models.CharField(max_length=200)
+    lid_off = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.start
