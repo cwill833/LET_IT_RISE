@@ -88,3 +88,8 @@
 .container .info span .fa {
   color: #EF3B3A;
 }
+
+input.btn{
+    background-color: #45510D;
+    color: white;
+}
