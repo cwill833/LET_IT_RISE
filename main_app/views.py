@@ -16,18 +16,18 @@ def bakes_detail(request):
 def fermentations_detail(request):
   return render(request, 'fermentations/detail.html')
 
+class RiseCreate(CreateView):
+  model = Rise
+  fields = ['name', 'temp']
+  success_url = '/leavens/' 
+
 def leavens_detail(request):
   return render(request, 'leavens/detail.html')
 
-class LeaveCreate(CreateView):
+class LeavenCreate(CreateView):
   model = Leaven
   fields = ['name', 'temp']
-  def form_valid(self, form):
-    # Assign the logged in user (self.request.user)
-    form.instance.user = self.request.user
-    # Let the CreateView do its job as usual
-    return super().form_valid(form)
-  success_url = '/starters3/'  
+  success_url = '/leavens/'  
 
 def mixes_detail(request):
   return render(request, 'mixes/detail.html')

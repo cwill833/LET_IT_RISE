@@ -21,21 +21,20 @@ class Starter(models.Model):
 
 
 class Leaven(models.Model):
-    start = models.DateField('start date')
     time = models.CharField(max_length=200)
     temp = models.CharField(max_length=100)
-    starter = models.ForeignKey(Starter, on_delete=models.CASCADE)
+    starter = models.OneToOneField(Starter, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.time
+
+class Rise(models.Model):
+    time = models.CharField(max_length=200)
+    temp = models.CharField(max_length=100)
+    starter = models.OneToOneField(Starter, on_delete=models.CASCADE)
     
     def __str__(self):
-        return self.start
-
-# class Rise(models.Model):
-#     start = models.DateField('start date')
-#     time = models.CharField(max_length=200)
-#     temp = models.CharField(max_length=100)
-
-#     def __str__(self):
-#         return self.start
+        return self.time
 
 # class Bake(models.Model):
 #     start = models.DateField('start date')
