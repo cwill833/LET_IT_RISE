@@ -4,6 +4,7 @@ from django.urls import reverse
 from datetime import date
 
 # Create your models here.
+
 class Progress(models.Model):
     page = models.CharField(max_length=200)
 
