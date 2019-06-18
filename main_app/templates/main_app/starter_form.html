@@ -1,4 +1,4 @@
-<!-- {% extends 'base.html' %}
+{% extends 'base.html' %}
 {% block content %}
 
 <section class="top-sect-day2">
@@ -28,11 +28,13 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugiat voluptatum ex labore odit doloribus aut necessitatibus eos rem ullam dolorum laboriosam, placeat totam quibusdam at recusandae enim sint aliquam?</p>
     </div>
     <div class="step1-last">
-        <div class="button">
-                <a href="{% url 'starters3' %}">NEXT!</a>
-        </div>
+        <form action=""  method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn" value="Next!">
+        </form>
     </div>
 
 </section>
 
-{% endblock %} -->
+{% endblock %}

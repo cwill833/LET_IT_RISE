@@ -3,6 +3,9 @@ from django.http import HttpResponse
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 
+from django.views.generic.edit import CreateView
+from .models import Starter
+
 
 def home(request):
   return render(request, 'home.html')
@@ -27,6 +30,11 @@ def starters1(request):
 
 def starters2(request):
   return render(request, 'starters/daytwo.html')
+
+class StarterCreate(CreateView):
+  model = Starter
+  fields = '__all__'
+  success_url = '/starters3/'
 
 def starters3(request):
   return render(request, 'starters/daythree.html')
