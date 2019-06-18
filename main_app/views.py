@@ -4,7 +4,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 
 from django.views.generic.edit import CreateView
-from .models import Starter, Leaven 
+from .models import Starter, Leaven, Rise
 
 
 def home(request):
