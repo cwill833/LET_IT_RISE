@@ -4,7 +4,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 
 from django.views.generic.edit import CreateView
-from .models import Starter, Leaven, Rise
+from .models import Starter, Rise, Leaven
 
 
 def home(request):
@@ -18,8 +18,8 @@ def fermentations_detail(request):
 
 class RiseCreate(CreateView):
   model = Rise
-  fields = ['name', 'temp']
-  success_url = '/leavens/' 
+  fields = ['time', 'temp']
+  success_url = '/' 
 
 def leavens_detail(request):
   return render(request, 'leavens/detail.html')
@@ -27,7 +27,10 @@ def leavens_detail(request):
 class LeavenCreate(CreateView):
   model = Leaven
   fields = ['time', 'temp']
-  success_url = '/leavens/'  
+  success_url = '/stepfive/'  
+
+def stepfive(request):
+  return render(request, 'starters/stepfive.html')
 
 def mixes_detail(request):
   return render(request, 'mixes/detail.html')

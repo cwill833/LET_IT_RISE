@@ -11,6 +11,7 @@ urlpatterns = [
     path('starters/create/', views.StarterCreate.as_view(), name='starter_create'),
     path('leavens/create/', views.LeavenCreate.as_view(), name='leaven_create'),
     path('rise/create/', views.RiseCreate.as_view(), name='rise_create'),
+    path('stepfive/', views.stepfive, name='stepfive'),
 
     path('starters3/', views.starters3, name='starters3'),
     path('leavens/', views.leavens_detail, name='leavens_detail'),
