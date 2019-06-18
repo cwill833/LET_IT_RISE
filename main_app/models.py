@@ -20,13 +20,14 @@ class Starter(models.Model):
 #     description = models.TextField(max_length=250)
 
 
-# class Leaven(models.Model):
-#     start = models.DateField('start date')
-#     time = models.CharField(max_length=200)
-#     temp = models.CharField(max_length=100)
-
-#     def __str__(self):
-#         return self.start
+class Leaven(models.Model):
+    start = models.DateField('start date')
+    time = models.CharField(max_length=200)
+    temp = models.CharField(max_length=100)
+    starter = models.ForeignKey(Starter, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return self.start
 
 # class Rise(models.Model):
 #     start = models.DateField('start date')

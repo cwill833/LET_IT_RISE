@@ -4,7 +4,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 
 from django.views.generic.edit import CreateView
-from .models import Starter
+from .models import Starter, Leaven 
 
 
 def home(request):
@@ -18,6 +18,16 @@ def fermentations_detail(request):
 
 def leavens_detail(request):
   return render(request, 'leavens/detail.html')
+
+class LeaveCreate(CreateView):
+  model = Leaven
+  fields = ['name', 'temp']
+  def form_valid(self, form):
+    # Assign the logged in user (self.request.user)
+    form.instance.user = self.request.user
+    # Let the CreateView do its job as usual
+    return super().form_valid(form)
+  success_url = '/starters3/'  
 
 def mixes_detail(request):
   return render(request, 'mixes/detail.html')
