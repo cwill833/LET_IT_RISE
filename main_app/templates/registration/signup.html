@@ -1,8 +1,6 @@
 {% extends 'create.html' %}
 {% block content %}
 
-  <h1>Sign Up</h1>
-
   {% if error_message %}
   
   <p class="red-text">{{ error_message }}</p>
@@ -15,16 +13,25 @@
     <input type="submit" class="btn" value="signup">
   </form> -->
 
-
-
   <div class="login-page">
       <div class="form">
-        <form class="register-form">
-          <input type="text" placeholder="name"/>
-          <input type="password" placeholder="password"/>
+        <h3> GET THAT DOUGH</h3>
+        <form class="register-form" method="post" action="{% url 'signup' %}">
+          {% csrf_token %}
+          <label for="id_username"></label>
+          <input type="text" name="username" maxlength="150" autofocus="" required="" id="id_username" placeholder="Username">
+
+          <label for="id_password1"></label>
+          <input type="password" name="password1" required="" id="id_password1" placeholder=Password>
+
+          <label for="id_password2"></label>
+          <input type="password" name="password2" required="" id="id_password2" placeholder="Password confirmation">
+
+
           <input type="text" placeholder="email address"/>
-          <input type="text" placeholder="email address"/>
-          <button>create</button>
+
+          <input type="submit" class="btn" value="LET'S BAKE">
+          <input type="hidden" name="next" value="{{ next }}">
           <p class="message">Already registered? <a href="{% url 'login' %}">Sign In</a></p>
         </form>
       </div>
