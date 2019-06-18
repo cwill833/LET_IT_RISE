@@ -23,7 +23,11 @@
                     <p class="bottom">Rise</p>
                 </div>
             </li>
-            <li class="started"><a href="/accounts/login">Get Started</a></li>
+            {% if user.is_authenticated %}
+            <li class="started"><a href="{% url 'logout' %}">Log Out</a></li>
+            {% else %}
+            <li class="started"><a href="{% url 'login' %}">Get Started</a></li>
+            {% endif %}
         </ul>
     </nav>
     {% block content %}

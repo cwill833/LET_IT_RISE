@@ -33,7 +33,12 @@ def starters2(request):
 
 class StarterCreate(CreateView):
   model = Starter
-  fields = '__all__'
+  fields = ['name', 'temp']
+  def form_valid(self, form):
+    # Assign the logged in user (self.request.user)
+    form.instance.user = self.request.user
+    # Let the CreateView do its job as usual
+    return super().form_valid(form)
   success_url = '/starters3/'
 
 def starters3(request):
