@@ -28,6 +28,9 @@ def starters1(request):
 def starters2(request):
   return render(request, 'starters/daytwo.html')
 
+def starters3(request):
+  return render(request, 'starters/daythree.html')
+
 def trackers_index(request):
   return render(request, 'trackers/detail.html')
 

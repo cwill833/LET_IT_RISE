@@ -239,6 +239,22 @@ h3.started, h3.intro{
     background-color: aqua;
 }
 
+.upload-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload{
+    margin-top: 30px;
+    width: 140px;
+    height: 100px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .button {
     border-top: 1px solid #45510d;
     background: #45510d;

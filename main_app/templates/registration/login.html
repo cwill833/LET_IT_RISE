@@ -1,13 +1,30 @@
-{% extends 'base.html' %}
+{% extends 'log.html' %}
 {% block content %}
 
-    <h1>Log In</h1>
+    <!-- <h1>Log In</h1>
     <form method="post" action="{% url 'login' %}">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" class="btn" value="login">
         <input type="hidden" name="next" value="{{ next }}">
       </form>
-      <a href="{% url 'signup' %}">Sign Up</a>
+      <a href="{% url 'signup' %}">Sign Up</a> -->
       
-{% endblock %}
+
+
+<div class="login-page">
+    <div class="form">
+      <form class="login-form" method="post" action="{% url 'login' %}">
+          {% csrf_token %}
+        <label for="id_username">Username:</label>
+        <input type="text" name="username" autofocus="" required="" id="id_username">
+        <label for="id_password">Password:</label>
+        <input type="password" name="password" required="" id="id_password">
+        <input type="submit" class="btn" value="login">
+        <input type="hidden" name="next" value="{{ next }}">
+        <p class="message">Not registered? <a href="{% url 'signup' %}">Create an account</a></p>
+      </form>
+    </div>
+  </div>
+
+  {% endblock %}
