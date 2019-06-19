@@ -121,6 +121,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-LOGIN_REDIRECT_URL = '/starters1'
+LOGIN_REDIRECT_URL = '/stepone/'
 
 LOGOUT_REDIRECT_URL = '/'

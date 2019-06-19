@@ -5,7 +5,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 from django.views.generic.edit import CreateView
 from .models import Starter, Rise, Leaven
-
+from .forms import LeavenForm, StarterForm
 
 def home(request):
   return render(request, 'home.html')
@@ -27,11 +27,7 @@ def leavens_detail(request):
 class LeavenCreate(CreateView):
   model = Leaven
   fields = ['time', 'temp']
-  def form_valid(self, form):
-    # Assign the logged in user (self.request.user)
-    form.instance.user = self.request.user
-    # Let the CreateView do its job as usual
-    return super().form_valid(form)
+  
   success_url = '/stepfive/'  
 
 def stepfive(request):
@@ -43,11 +39,21 @@ def mixes_detail(request):
 def shapes_detail(request):
   return render(request, 'shapes/detail.html')
 
-def starters1(request):
-  return render(request, 'starters/dayone.html')
+def stepone(request):
+  return render(request, 'starters/stepone.html')
 
-def starters2(request):
-  return render(request, 'starters/daytwo.html')
+# def steptwo(request):
+# 	# create the ModelForm using the data in request.POST
+#   starter_form = StarterForm()
+#   form = StarterForm(request.POST)
+#   # validate the form
+#   if form.is_valid():
+#     # don't save the form to the db until it
+#     # has the cat_id assigned
+#     new_starter = form.save(commit=False)
+#     new_starter
+#     new_starter.save()
+#   return render(request, 'starters/steptwo.html')
 
 class StarterCreate(CreateView):
   model = Starter
@@ -57,10 +63,24 @@ class StarterCreate(CreateView):
     form.instance.user = self.request.user
     # Let the CreateView do its job as usual
     return super().form_valid(form)
-  success_url = '/starters3/'
+  success_url = '/stepthree/'
 
-def starters3(request):
-  return render(request, 'starters/daythree.html')
+def stepthree(request):
+  starter = Starter.objects.filter(user = request.user).reverse()[0]
+  return render(request, 'starters/stepthree.html', {'starter': starter})
+
+def add_leaven(request, starter_id):
+	# create the ModelForm using the data in request.POST
+  form = LeavenForm(request.POST)
+  # validate the form
+  if form.is_valid():
+    # don't save the form to the db until it
+    # has the cat_id assigned
+    new_leaven = form.save(commit=False)
+    new_leaven.starter_id = starter_id
+    new_leaven.save()
+  return render(request, 'stepfive', {'starter_id': starter_id})
+
 
 def trackers_index(request):
   return render(request, 'trackers/detail.html')
