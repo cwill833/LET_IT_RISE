@@ -26,17 +26,12 @@ def leavens_detail(request):
 
 class LeavenCreate(CreateView):
   model = Leaven
-<<<<<<< HEAD
-  fields = ['name', 'temp']
-  success_url = '/leavens/'  
-=======
   fields = ['time', 'temp']
   
   success_url = '/stepfive/'  
 
 def stepfive(request):
   return render(request, 'starters/stepfive.html')
->>>>>>> 562201428731b1f305a0766f456b5699dd90f9e5
 
 def mixes_detail(request):
   return render(request, 'mixes/detail.html')

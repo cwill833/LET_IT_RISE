@@ -1,0 +1,1 @@
+web: gunicorn LET_IT_RISE.wsgi --log-file -
