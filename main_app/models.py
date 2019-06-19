@@ -30,9 +30,10 @@ class Rise(models.Model):
     def __str__(self):
         return self.time
 
-# class Bake(models.Model):
-#     time = models.CharField(max_length=200)
-#     temp = models.CharField(max_length=100)
-
-#     def __str__(self):
-#         return self.start
+class Bake(models.Model):
+    time = models.CharField(max_length=200)
+    temp = models.CharField(max_length=100)
+    starter = models.ForeignKey(Starter, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return self.time

@@ -1,5 +1,10 @@
 from django.forms import ModelForm
-from .models import Leaven, Starter, Rise
+from .models import Leaven, Starter, Rise, Bake
+
+class BakeForm(ModelForm):
+  class Meta:
+    model = Bake
+    fields = ['time', 'temp']
 
 class RiseForm(ModelForm):
   class Meta:

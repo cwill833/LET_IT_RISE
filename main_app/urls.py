@@ -30,6 +30,10 @@ urlpatterns = [
 
     path('stepseven/', views.stepseven, name='stepseven'),
 
+    path('stepeight/<int:starter_id>/', views.stepeight, name='stepeight'),
+
+    path('stepeight/<int:starter_id>/add_bake/', views.add_bake, name='add_bake'),
+
     # path('rise/create/', views.RiseCreate.as_view(), name='rise_create'),
 
     path('leavens/', views.leavens_detail, name='leavens_detail'),
