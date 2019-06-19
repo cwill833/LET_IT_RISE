@@ -16,11 +16,15 @@ urlpatterns = [
 
     # path('starters2/', views.starters2, name='starters2'),
 
+    path('stepfour/<int:starter_id>/', views.stepfour, name='stepfour'),
 
-    path('stepfour/<int:starter_id>/add_leaven', views.LeavenCreate.as_view(), name='leaven_create'),
+    # path('stepfour/<int:starter_id>/add_leaven/', views.LeavenCreate.as_view(), name='leaven_create'),
+
+    path('stepfour/<int:starter_id>/add_leaven/', views.add_leaven, name='add_leaven'),
+
+    path('stepfive/', views.stepfive, name='stepfive'),
 
     path('rise/create/', views.RiseCreate.as_view(), name='rise_create'),
-    path('stepfive/', views.stepfive, name='stepfive'),
 
     path('leavens/', views.leavens_detail, name='leavens_detail'),
 
