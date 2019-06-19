@@ -13,17 +13,11 @@ class Starter(models.Model):
     def __str__(self):
         return self.name
 
-# class Progress(models.Model):
-#     page = models.CharField(max_length=200)
-
-# class Comment(models.Model):
-#     description = models.TextField(max_length=250)
-
 
 class Leaven(models.Model):
     time = models.CharField(max_length=200)
     temp = models.CharField(max_length=100)
-    starter = models.OneToOneField(Starter, on_delete=models.CASCADE)
+    starter = models.ForeignKey(Starter, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.time
@@ -31,8 +25,8 @@ class Leaven(models.Model):
 class Rise(models.Model):
     time = models.CharField(max_length=200)
     temp = models.CharField(max_length=100)
-    starter = models.OneToOneField(Starter, on_delete=models.CASCADE)
-    
+    starter = models.ForeignKey(Starter, on_delete=models.CASCADE)
+
     def __str__(self):
         return self.time
 
