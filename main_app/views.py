@@ -39,14 +39,12 @@ def stepfour(request, starter_id):
 #   success_url = '/stepfive/' 
 
 def add_leaven(request, starter_id):
-  print(starter_id)
 	# create the ModelForm using the data in request.POST
   form = LeavenForm(request.POST)
   # validate the form
   if form.is_valid():
     leaven = form.save(commit=False)
     leaven.starter_id = starter_id
-    print(starter_id)
     leaven.save()
   return redirect('stepfive')
 
