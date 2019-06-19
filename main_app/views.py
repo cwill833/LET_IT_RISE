@@ -5,7 +5,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 from django.views.generic.edit import CreateView
 from .models import Starter, Rise, Leaven
-from .forms import LeavenForm, StarterForm
+from .forms import LeavenForm, StarterForm, RiseForm, BakeForm
 
 def home(request):
   return render(request, 'home.html')
@@ -52,12 +52,44 @@ def stepfive(request):
   starter = Starter.objects.filter(user = request.user).reverse()[0]
   return render(request, 'starters/stepfive.html', {'starter': starter})
 
+def stepsix(request, starter_id):
+  starter = Starter.objects.get(id=starter_id)
+  rise_form = RiseForm()
+  return render(request, 'starters/stepsix.html', {'starter': starter, 'rise_form': rise_form})
 
+def add_rise(request, starter_id):
+	# create the ModelForm using the data in request.POST
+  form = RiseForm(request.POST)
+  # validate the form
+  if form.is_valid():
+    rise= form.save(commit=False)
+    rise.starter_id = starter_id
+    rise.save()
+  return redirect('stepseven')
 
-class RiseCreate(CreateView):
-  model = Rise
-  fields = ['time', 'temp']
-  success_url = '/stepfive/' 
+def stepseven(request):
+  starter = Starter.objects.filter(user = request.user).reverse()[0]
+  return render(request, 'starters/stepseven.html', {'starter': starter})
+
+def stepeight(request, starter_id):
+  starter = Starter.objects.get(id=starter_id)
+  bake_form = BakeForm()
+  return render(request, 'starters/stepeight.html', {'starter': starter, 'bake_form': bake_form})
+
+def add_bake(request, starter_id):
+	# create the ModelForm using the data in request.POST
+  form = BakeForm(request.POST)
+  # validate the form
+  if form.is_valid():
+    bake = form.save(commit=False)
+    bake.starter_id = starter_id
+    bake.save()
+  return redirect('stepseven')
+
+# class RiseCreate(CreateView):
+#   model = Rise
+#   fields = ['time', 'temp']
+#   success_url = '/stepfive/' 
 
 
 
