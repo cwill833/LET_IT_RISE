@@ -26,7 +26,7 @@ def leavens_detail(request):
 
 class LeavenCreate(CreateView):
   model = Leaven
-  fields = ['time', 'temp']
+  fields = ['name', 'temp']
   success_url = '/leavens/'  
 
 def mixes_detail(request):
