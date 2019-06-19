@@ -17,7 +17,6 @@ class Starter(models.Model):
 class Leaven(models.Model):
     time = models.CharField(max_length=200)
     temp = models.CharField(max_length=100)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
     starter = models.ForeignKey(Starter, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -26,7 +25,6 @@ class Leaven(models.Model):
 class Rise(models.Model):
     time = models.CharField(max_length=200)
     temp = models.CharField(max_length=100)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
     starter = models.ForeignKey(Starter, on_delete=models.CASCADE)
 
     def __str__(self):
