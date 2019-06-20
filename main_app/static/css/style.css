@@ -162,6 +162,11 @@ h3.started, h3.intro{
     width: 375px;
     
 }
+
+.process{
+    height: 350px;
+}
+
 .about, .tools{
     background-color: #F5E1CB;
 }
@@ -200,6 +205,24 @@ h3.started, h3.intro{
 .step1, .step2{
     margin-left: 25px;
     width: 60px;
+}
+
+.step-one-list{
+    margin-top: 15px;
+    list-style-type: disc;
+    margin-left: 25px;
+    padding-left: 10px;
+    
+}
+
+.step-two-ul{
+    margin-block-end: 11px;
+    margin-left: 10px;
+    list-style-type: disc;
+    margin-top: 15px;
+}
+.space{
+    margin: 10px 0;
 }
 
 .media{
