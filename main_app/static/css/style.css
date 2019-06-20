@@ -62,7 +62,6 @@ footer{
 .icon, .started{
     width: 50px;
     height: 50px;
-    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,6 +70,9 @@ footer{
 
 .icon{
     margin-left: 25px;
+    background-image: url(https://i.imgur.com/0iTlANO.png);
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
 }
 
 .started{
@@ -88,7 +90,6 @@ footer{
 }
 
 .title-rise{
-    font-family: 'PT sans';
     font-weight: 200;
     font-size: 30px;
     letter-spacing: 2.19px;
@@ -201,6 +202,38 @@ h3.started, h3.intro{
     border-radius: 50px;
     background-color: #B4BA9A;
 } 
+
+.icon1-tools{
+    background-image: url(https://i.imgur.com/YxN8jJU.png);
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.icon2-tools{
+    background-image: url(https://i.imgur.com/kmB7QMb.png);
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.icon3-tools{
+    background-image: url(https://i.imgur.com/YBHoKlN.png);
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.icon4-tools{
+    background-image: url(https://i.imgur.com/r37D76c.png);
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+}
 
 .process-icon, .process-list, .tools-icon{
     margin-top: 20px;
