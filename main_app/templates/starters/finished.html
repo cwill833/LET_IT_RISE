@@ -11,7 +11,11 @@
     </div>
 
 </section>
-
+<div class="">
+    {% for start in starter %}
+    <span class="">{{ start.name }}</span>
+    <p>Temp: {{ start.temp }}</p>
+    {% endfor %}
 
 </section>
 

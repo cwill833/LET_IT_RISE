@@ -129,4 +129,5 @@ def shapes_detail(request):
   return render(request, 'shapes/detail.html')
 
 def finished(request):
-  return render(request, 'starters/finished.html' )
+  starter = Starter.objects.all()
+  return render(request, 'starters/finished.html', {'starter': starter})
