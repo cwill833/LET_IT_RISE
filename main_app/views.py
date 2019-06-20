@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Starter, Rise, Leaven, Bake
 from .forms import LeavenForm, StarterForm, RiseForm, BakeForm
 
@@ -157,3 +157,12 @@ def detail(request, starter_id):
     'rise': rise,
     'bake': bake,
   })
+
+class StarterUpdate(UpdateView):
+  model = Starter
+  fields = ['name']
+  success_url = '/index/'
+
+class StarterDelete(DeleteView):
+  model = Starter
+  success_url = '/index/'

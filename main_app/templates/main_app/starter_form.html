@@ -1,6 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 
+{% if object %}
+<form action=""  method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn" value="Next!">
+</form>
+
+{% else %}
 <section class="top-sect-day2">
         <div class="step2">
             <h3>Step TWO</h3>
@@ -84,5 +92,5 @@
             </form>
         </div>
     </section>
-
+    {% endif %}
 {% endblock %}

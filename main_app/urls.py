@@ -42,7 +42,8 @@ urlpatterns = [
 
     path('detail/<int:starter_id>/', views.detail, name='detail'),
 
-    
+    path('starter/<int:pk>/update/', views.StarterUpdate.as_view(), name='starter_update'),
+    path('starter/<int:pk>/delete/', views.StarterDelete.as_view(), name='starter_delete'),
 
 
 
