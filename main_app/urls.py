@@ -37,6 +37,11 @@ urlpatterns = [
     # path('rise/create/', views.RiseCreate.as_view(), name='rise_create'),
 
     path('finished/<int:starter_id>/', views.finished, name='finished'),
+
+    path('index/', views.index, name='index'),
+
+    path('detail/<int:starter_id>/', views.detail, name='detail'),
+
     
 
 

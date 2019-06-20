@@ -139,3 +139,21 @@ def finished(request, starter_id):
     'rise': rise,
     'bake': bake,
   })
+
+def index(request):
+  starter = Starter.objects.all()
+  return render(request, 'starters/index.html', {
+    'starter': starter,
+  })
+
+def detail(request, starter_id):
+  starter = Starter.objects.get(id=starter_id)
+  leaven = Leaven.objects.get(starter_id=starter_id)
+  rise = Rise.objects.get(starter_id=starter_id)
+  bake = Bake.objects.get(starter_id=starter_id)
+  return render(request, 'starters/detail.html', {
+    'starter': starter,
+    'leaven': leaven,
+    'rise': rise,
+    'bake': bake,
+  })

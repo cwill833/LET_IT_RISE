@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<section class="top-sect-day1">
+    <div class="step1">
+        <h3>All Bakes</h3>
+    </div>   
+</section>
+<section>
+    {% for start in starter %}
+    <div class="">    
+        <a href="{% url 'detail' start.id %}">{{ start.name }}</a>
+    </div>
+    {% endfor %}
+</section>
+
+
+
+{% endblock %}
