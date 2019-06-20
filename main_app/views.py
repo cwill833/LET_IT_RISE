@@ -84,7 +84,7 @@ def add_bake(request, starter_id):
     bake = form.save(commit=False)
     bake.starter_id = starter_id
     bake.save()
-  return redirect('stepseven')
+  return redirect('finished')
 
 # class RiseCreate(CreateView):
 #   model = Rise
