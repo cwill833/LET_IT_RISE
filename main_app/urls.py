@@ -49,6 +49,6 @@ urlpatterns = [
     path('bakes/', views.bakes_detail, name='bakes_detail'),
     path('trackers/', views.trackers_index, name='trackers_index'),
 
-    path('finished/', views.finished, name='finished'),
+    path('finished/<int:starter_id>/', views.finished, name='finished'),
 
 ]

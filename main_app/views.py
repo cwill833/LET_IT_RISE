@@ -4,7 +4,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 
 from django.views.generic.edit import CreateView
-from .models import Starter, Rise, Leaven
+from .models import Starter, Rise, Leaven, Bake
 from .forms import LeavenForm, StarterForm, RiseForm, BakeForm
 
 def home(request):
@@ -128,6 +128,14 @@ def mixes_detail(request):
 def shapes_detail(request):
   return render(request, 'shapes/detail.html')
 
-def finished(request):
-  starter = Starter.objects.all()
-  return render(request, 'starters/finished.html', {'starter': starter})
+def finished(request, starter_id):
+  starter = Starter.objects.get(id=starter_id)
+  leaven = Leaven.objects.get(id=starter_id)
+  rise = Rise.objects.get(id=starter_id)
+  bake = Bake.objects.get(id=starter_id)
+  return render(request, 'starters/finished.html', {
+    'starter': starter,
+    'leaven': leaven,
+    'rise': rise,
+    'bake': bake,
+  })
