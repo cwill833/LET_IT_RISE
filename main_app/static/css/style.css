@@ -282,3 +282,7 @@ h3.started, h3.intro{
 .button a{
     color: white;
 }
+
+#pic1_text, #pic2_text, #pic3_text {
+    display: none;
+}
