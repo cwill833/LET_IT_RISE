@@ -25,7 +25,7 @@ class StarterCreate(CreateView):
   success_url = '/stepthree/'
 
 def stepthree(request):
-  starter = Starter.objects.filter(user = request.user).reverse()[0]
+  starter = Starter.objects.filter(user = request.user).order_by('-pk')[0]
   return render(request, 'starters/stepthree.html', {'starter': starter})
 
 def stepfour(request, starter_id):
@@ -49,7 +49,7 @@ def add_leaven(request, starter_id):
   return redirect('stepfive')
 
 def stepfive(request):
-  starter = Starter.objects.filter(user = request.user).reverse()[0]
+  starter = Starter.objects.filter(user = request.user).order_by('-pk')[0]
   return render(request, 'starters/stepfive.html', {'starter': starter})
 
 def stepsix(request, starter_id):
@@ -68,7 +68,7 @@ def add_rise(request, starter_id):
   return redirect('stepseven')
 
 def stepseven(request):
-  starter = Starter.objects.filter(user = request.user).reverse()[0]
+  starter = Starter.objects.filter(user = request.user).order_by('-pk')[0]
   return render(request, 'starters/stepseven.html', {'starter': starter})
 
 def stepeight(request, starter_id):
@@ -84,7 +84,7 @@ def add_bake(request, starter_id):
     bake = form.save(commit=False)
     bake.starter_id = starter_id
     bake.save()
-  return redirect('finished')
+  return redirect('finished', starter_id=starter_id)
 
 # class RiseCreate(CreateView):
 #   model = Rise
@@ -130,9 +130,9 @@ def shapes_detail(request):
 
 def finished(request, starter_id):
   starter = Starter.objects.get(id=starter_id)
-  leaven = Leaven.objects.get(id=starter_id)
-  rise = Rise.objects.get(id=starter_id)
-  bake = Bake.objects.get(id=starter_id)
+  leaven = Leaven.objects.get(starter_id=starter_id)
+  rise = Rise.objects.get(starter_id=starter_id)
+  bake = Bake.objects.get(starter_id=starter_id)
   return render(request, 'starters/finished.html', {
     'starter': starter,
     'leaven': leaven,
