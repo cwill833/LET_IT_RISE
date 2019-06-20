@@ -31,18 +31,45 @@
     
     <section id="pic1_text" class="bottom-sect-day1">
         <div class="step1-text">
-            <p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugiat voluptatum ex labore odit doloribus aut necessitatibus eos rem ullam dolorum laboriosam, placeat totam quibusdam at recusandae enim sint aliquam?</p>
+            <ol>
+                <li>Picture 1/wait</li>
+                <ul class="step-two-ul">
+                    <li>Your leaven needs more time to ferment.</li>
+                    <li>Let it sit for one hour.</li>
+                </ul>
+            </ol>  
         </div>
     </section>
     
     <section id="pic2_text" class="bottom-sect-day1">
         <div class="step1-text">
-            <p>2Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugiat voluptatum ex labore odit doloribus aut necessitatibus eos rem ullam dolorum laboriosam, placeat totam quibusdam at recusandae enim sint aliquam?</p>
+            <ol start="2">
+                <li>Picture 2/over fermented</li>
+                <ul class="step-two-ul">
+                    <li>Your leaven has over fermented.</li>
+                    <li>Add 25g of whole wheat flour, 25g white flour, 50g of filtered water to your starter.</li>
+                    <li>Mix it all together using your hands.</li>
+                    <li>Use your dough spatula to scrape off the dough on your hands into the bowl.</li>
+                    <li>Then clean off the sides of the bowl.</li>
+                    <li>Let it sit for one hour.</li>
+                </ul>
+            </ol> 
         </div>
     </section>
     <section id="pic3_text" class="bottom-sect-day1">
             <div class="step1-text">
-                <p>3Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugiat voluptatum ex labore odit doloribus aut necessitatibus eos rem ullam dolorum laboriosam, placeat totam quibusdam at recusandae enim sint aliquam?</p>
+                <ol start="3">
+                    <li>Picture 3/ready</li>
+                    <ul class="step-two-ul">
+                        <li>Your leaven is ready.</li>
+                        <li>In a large mixing bowl add 700g of warm filter water (80ºF)</li>
+                        <li>Add 200g of your leaven into the bowl and stir it together.</li>
+                        <li>Add 900g of white flour, 100g of whole wheat flour, and 20g of salt.</li>
+                        <li>Mix everything together by hand until no bits of dry flour remain.</li>
+                        <li>Place a damp kitchen towel over the bowl.</li>
+                        <li>It is now time for the dough to do its first rise (fermentation). Let it sit for 30 minutes.</li>
+                    </ul>
+                </ol> 
             </div>
             <div class="step1-last">
                 <form action="{% url 'add_leaven' starter.id %}"  method="POST">
