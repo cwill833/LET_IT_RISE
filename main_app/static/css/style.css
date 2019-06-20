@@ -142,14 +142,14 @@ li a {
     display: flex;
     flex-direction: column;
     height: 250px;
-    background-image: url(https://i.imgur.com/Pf9zDDW.jpg);
+    background-image: url(https://i.imgur.com/V2xIhQX.png);
     background-repeat: no-repeat;
     background-size: 455px 250px;
     justify-content: flex-end;
 }
 
 .wrap{
-    width: 160px;
+    width: 140px;
 }
 
 h3.started, h3.intro{
