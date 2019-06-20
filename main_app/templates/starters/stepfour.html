@@ -6,13 +6,13 @@
         <h3>Step FOUR</h3>
     </div>
     <div class="example-container">
-        <div class="examples">
+        <div id="pic1" class="examples">
 
         </div>
-        <div class="examples">
-
+        <div id="pic2" class="examples">
+    
         </div>
-        <div class="examples">
+        <div id="pic3" class="examples">
 
         </div>
     </div>
@@ -22,19 +22,34 @@
             <p>upload image here!</p>
         </div>
     </div>
-
-<section class="bottom-sect-day1">
-    <div class="step1-text">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugiat voluptatum ex labore odit doloribus aut necessitatibus eos rem ullam dolorum laboriosam, placeat totam quibusdam at recusandae enim sint aliquam?</p>
-    </div>
-    <div class="step1-last">
-        <form action="{% url 'add_leaven' starter.id %}"  method="POST">
-            {% csrf_token %}
-            {{ leaven_form.as_p }}
-            <input type="submit" class="btn" value="Next!">
-        </form>
-    </div>
-
 </section>
-
+<section id="default_text" class="bottom-sect-day1">
+        <div class="step1-text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugiat voluptatum ex labore odit doloribus aut necessitatibus eos rem ullam dolorum laboriosam, placeat totam quibusdam at recusandae enim sint aliquam?</p>
+        </div>
+    </section>
+    
+    <section id="pic1_text" class="bottom-sect-day1">
+        <div class="step1-text">
+            <p>1Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugiat voluptatum ex labore odit doloribus aut necessitatibus eos rem ullam dolorum laboriosam, placeat totam quibusdam at recusandae enim sint aliquam?</p>
+        </div>
+    </section>
+    
+    <section id="pic2_text" class="bottom-sect-day1">
+        <div class="step1-text">
+            <p>2Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugiat voluptatum ex labore odit doloribus aut necessitatibus eos rem ullam dolorum laboriosam, placeat totam quibusdam at recusandae enim sint aliquam?</p>
+        </div>
+    </section>
+    <section id="pic3_text" class="bottom-sect-day1">
+            <div class="step1-text">
+                <p>3Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugiat voluptatum ex labore odit doloribus aut necessitatibus eos rem ullam dolorum laboriosam, placeat totam quibusdam at recusandae enim sint aliquam?</p>
+            </div>
+            <div class="step1-last">
+                <form action="{% url 'add_leaven' starter.id %}"  method="POST">
+                    {% csrf_token %}
+                    {{ leaven_form.as_p }}
+                    <input type="submit" class="btn" value="Next!">
+                </form>
+            </div>
+        </section>
 {% endblock %}
