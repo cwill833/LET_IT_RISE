@@ -107,7 +107,7 @@ def finished(request, starter_id):
 
 @login_required
 def index(request):
-  starter = Starter.objects.all()
+  starter = Starter.objects.filter(user = request.user)
   return render(request, 'starters/index.html', {
     'starter': starter,
   })
