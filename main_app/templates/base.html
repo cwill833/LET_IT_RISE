@@ -22,9 +22,9 @@
                 </div>
             </li>
             {% if user.is_authenticated %}
-            <li class="started"><a href="{% url 'logout' %}">Log Out</a></li>
+            <li class="started"><a href="{% url 'logout' %}" class="arial bigger">Log Out</a></li>
             {% else %}
-            <li class="started"><a href="{% url 'login' %}">Get Started</a></li>
+            <li class="started"><a href="{% url 'login' %}" class="arial bigger">Get Started</a></li>
             {% endif %}
         </ul>
     </nav>

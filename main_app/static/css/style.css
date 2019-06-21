@@ -146,6 +146,10 @@ li a {
     font-family: 'Arial Narrow';
 }
 
+.bigger{
+    font-size: 21px;
+}
+
 .span1{
     color: #3A3434;
     font-size: 16px;
