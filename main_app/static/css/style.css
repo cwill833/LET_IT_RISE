@@ -57,7 +57,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Helvetica';
+    font-family: 'Arial Narrow';
 }
 
 .icon{
@@ -142,6 +142,7 @@ footer{
 li a {
     color: black;
     font-size: 12px;
+    font-family: 'Arial Narrow';
 }
 
 .span1{
@@ -166,6 +167,7 @@ li a {
 h3.intro{
     margin-bottom: 25px;
     margin-left: 20px;
+    font-family: 'Arial Narrow';
 }
 
 .bread-button{
@@ -278,7 +280,7 @@ h3.intro{
 }
 
 .media{
-    width: 250px;
+    width: 375px;
     height: 150px;
     background-color: aqua;
 }
@@ -396,7 +398,7 @@ a.home-link {
 }
 
 .active{
-    border: 2px solid blueviolet;
+    border: 2px solid #B4BA9A;
 }
 
 .card{
@@ -543,3 +545,6 @@ a.home-link {
     background-size: 250px 150px;
 }
 
+.arial{
+    font-family: 'Arial Narrow';
+}
