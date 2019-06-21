@@ -354,3 +354,7 @@ h3.started, h3.intro{
 #pic1_text, #pic2_text, #pic3_text {
     display: none;
 }
+
+a.home-link {
+    font-size: 16px;
+}
