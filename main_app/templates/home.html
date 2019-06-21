@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
+
     
 <section class="landing-photo">
     <div class="wrap">
         <h3 class="intro">A simple way to start baking dough from scratch</h3>
     </div>
-    <div>
-        <h3 class="started"><a href="{% url 'stepone' %}">Get Started</a></h3>
+    <div class="bread-button">
+        <h4 class="started none"><a href="{% url 'stepone' %}">Get started</a></h4>
     </div>
 </section>
 
@@ -34,7 +35,7 @@
                 <li>Enjoy</li>
             </ul>
         </div>
-        <p>Making bread with a natural leaven is a four-step process. First, we will develop the yeasts and bacteria that make up a “starter.” This will make or break your batch. The best breadmakers have made bad batches too. We are here to help flatten the learning curve, not your bread. Second, we will make the leaven. The leaven is what will make are bread dough rise. Third, we will let the bread rise and ferment. Finally, we will let that bread bake, eat it, and learn what we can do better next time. </p>
+        <p class="process-text">Making bread with a natural leaven is a four-step process. First, we will develop the yeasts and bacteria that make up a “starter.” This will make or break your batch. The best breadmakers have made bad batches too. We are here to help flatten the learning curve, not your bread. Second, we will make the leaven. The leaven is what will make are bread dough rise. Third, we will let the bread rise and ferment. Finally, we will let that bread bake, eat it, and learn what we can do better next time. </p>
     </div>
 </section>
 

@@ -1,6 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
 
+{% if object %}
+<div class="login-page extra">
+    <div class="form less">
+        <form class="login-form" method="post" action="">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn" value="SAVE">
+        </form>
+    </div>
+</div>
+
+{% else %}
+<div class="tracker">
+    <div class="box active">STARTER</div>
+    <div class="box">LEAVEN</div>
+    <div class="box">RISE</div>
+    <div class="box">BAKE</div>
+</div>
 <section class="top-sect-day2">
         <div class="step2">
             <h3>Step TWO</h3>
@@ -25,14 +43,14 @@
 
     <section id="default_text" class="bottom-sect-day1">
         <div class="step1-text">
-            <p>Click on the first photo to get started!</p>
+            <p>Hello! Click on the photo that best matches your dough.</p>
         </div>
     </section>
     
     <section id="pic1_text" class="bottom-sect-day1">
         <div class="step1-text">
           <ol>
-              <li>Picture 1/Stir</li>
+              <li>Stir</li>
               <ul class="step-two-ul">
                   <li>Use your hands to mix up your starter.</li>
                   <li>Use your dough spatula to scrape off the dough on your hands into the bowl.</li>
@@ -47,7 +65,7 @@
     <section id="pic2_text" class="bottom-sect-day1">
         <div class="step1-text">
             <ol start="2">
-                <li>Picture 2/Feed</li>
+                <li>Feed</li>
                 <ul class="step-two-ul">
                     <li>Use your dough spatula to scoop out 80% of your starter into the trash</li>
                     <li>Add 25g of whole wheat flour, 25g white flour, and 50g of filtered water to your starter.</li>
@@ -64,7 +82,7 @@
     <section id="pic3_text" class="bottom-sect-day1">
         <div class="step1-text">
             <ol start="3">
-                <li>Picture 3/Ready</li>
+                <li>READY!</li>
                 <ul class="step-two-ul">
                     <li>Your starter is now ready! We can use it to make our leaven. If you do not have the time to bake wait until tomorrow morning and feed your starter again. Otherwise, let's get started.</li>
                     <li>Before going to bed take 20g of your starter add place it into a bowl.</li>
@@ -77,12 +95,23 @@
             </ol>  
         </div>
         <div class="step1-last">
-            <form action=""  method="POST">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <input type="submit" class="btn" value="Next!">
-            </form>
+                <div class="login-page extra">
+                    <div class="form less">
+                        <form class="login-form" method="post" action="">
+                            {% csrf_token %}
+                        <p>
+                            <label for="id_name">Batch Name:</label> 
+                            <input type="text" name="name" maxlength="100" required="" id="id_name">
+                        </p>
+                        <p>
+                            <label for="id_temp">Temp:</label> 
+                            <input type="text" name="temp" maxlength="100" required="" id="id_temp">
+                        </p>
+                            <input type="submit" class="btn" value="Next!">
+                        </form>
+                    </div>
+                </div>
         </div>
     </section>
-
+    {% endif %}
 {% endblock %}

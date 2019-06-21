@@ -7,17 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <nav class="nav-container">
         <ul class="container">
             <li class="icon">
-                
+                <a style="width: 50px; height: 50px" href="{% url 'index'%}"></a>
             </li>
             <li class="middle">
                 <div>
-                    <h1>LET IT <span class="title-rise">Rise</span></h1>
+                    <h1><a class="home-link" href="{% url 'home' %}">LET IT <span class="title-rise">Rise</span></a></h1>
                 </div>
             </li>
             {% if user.is_authenticated %}
@@ -63,8 +64,10 @@
             <h3>CONNECT with US</h3>
         </div>
         <hr>
-        <div>
-            <p>ICONS</p>
+        <div class="flex-f">
+            <div class="small-f"></div>
+            <div class="small-i"></div>
+            <div class="small-t"></div>
         </div>
         <hr>
     </div>

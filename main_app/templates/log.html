@@ -13,17 +13,13 @@
     <nav class="nav-container">
         <ul class="container">
             <li class="icon">
-                icon
+                <a style="width: 50px; height: 50px" href="{% url 'index'%}"></a>
             </li>
             <li class="middle">
-                <div>
-                    <h1>LET IT</h1>
-                </div>
-                <hr id="top-line">
-                <div>
-                    <p class="bottom">Rise</p>
-                </div>
-            </li>
+                    <div>
+                        <h1><a class="home-link" href="{% url 'home' %}">LET IT <span class="title-rise">Rise</span></a></h1>
+                    </div>
+                </li>
             <li class="started"><a href="/accounts/login">Get Started</a></li>
         </ul>
     </nav>
@@ -63,8 +59,10 @@
             <h3>CONNECT with US</h3>
         </div>
         <hr>
-        <div>
-            <p>ICONS</p>
+        <div class="flex-f">
+            <div class="small-f"></div>
+            <div class="small-i"></div>
+            <div class="small-t"></div>
         </div>
         <hr>
     </div>

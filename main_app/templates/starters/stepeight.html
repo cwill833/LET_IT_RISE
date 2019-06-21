@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="tracker">
+    <div class="box">STARTER</div>
+    <div class="box">LEAVEN</div>
+    <div class="box">RISE</div>
+    <div class="box active">BAKE</div>
+</div>
 
 <section class="top-sect-day1">
     <div class="step1">
@@ -13,7 +19,7 @@
 
 <section class="bottom-sect-day1">
     <div class="step1-text">
-        <ul>
+        <ul class="step-two-ul">
             <li>Place your dutch oven (both pot and lid) into the oven and preheat the oven to 500ºF.</li>
             <li>Dust one of your loaves in your baskets with rice flour.</li>
             <li>Once the oven is preheated take out the dutch oven.</li>
@@ -25,11 +31,20 @@
         </ul>
     </div>
     <div class="step1-last">
-        <form action="{% url 'add_bake' starter.id %}"  method="POST">
+        <div class="login-page extra">
+            <div class="form less">
+                <form class="login-form" method="post" action="{% url 'add_bake' starter.id %}">
+                    {% csrf_token %}
+                    {{ bake_form.as_p }}
+                    <input type="submit" class="btn" value="Next!">
+                </form>
+            </div>
+        </div>
+        <!-- <form action="{% url 'add_bake' starter.id %}"  method="POST">
             {% csrf_token %}
             {{ bake_form.as_p }}
             <input type="submit" class="btn" value="Next!">
-        </form>
+        </form> -->
     </div>
 
 </section>

@@ -1,32 +1,59 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="tracker">
+    <div class="box">COMPLETE</div>
 
+</div>
 
-<section class="top-sect-day1">
-    <div class="step1">
-        <h3>Finished Bake</h3>
-    </div>
+<section class="top-sect-day1 flex">
+
     
     <div class="media" id="sf-pic">
         
     </div>
     
 </section>
-    <div class="">
-        <span class="">{{ starter.name }}</span>
-        <ul>
-            <li>Temperature of Starter: {{ starter.temp }}</li>
-            <li>Temperature when leaven was rising: {{ leaven.temp }}</li>
-            <li>Fermentation time of leaven: {{ leaven.time }}</li>
-            <li>Temperature when rising: {{ rise.temp }}</li>
-            <li>Time spent on rising: {{ rise.time }}</li>
-            <li>Temperature when baking: {{ bake.temp }}</li>
-            <li>Time spent on baking: {{ bake.time }}</li>
-        </ul>
+<div class="bottom-sect flex">
+        <div class="flex-f grid">
+            <div>Starter</div>
+            <div>
+                <ul>
+                    <li>Name of Batch: {{ starter.name }}</li>
+                    <li>Temperature: {{ starter.temp }}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex-f grid">
+            <div>Leaven</div>
+            <div>
+                <ul>
+                    <li>Temperature while rising: {{ leaven.temp }}</li>
+                    <li>Fermentation time: {{ leaven.time }}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex-f grid">
+            <div>Rise</div>
+            <div>
+                <ul>
+                    <li>Temperature when rising: {{ rise.temp }}</li>
+                    <li>Time spent on rising: {{ rise.time }}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="flex-f grid">
+            <div>Bake</div>
+            <div>
+                <ul>
+                    <li>Temperature when baking: {{ bake.temp }}</li>
+                    <li>Time spent baking: {{ bake.time }}</li>
+                </ul>
+            </div>
+        </div>
     </div>
     <div class="step1-last">
         <div class="button">
-            <a href="{% url 'index' %}">NEXT!</a>
+            <a href="{% url 'index' %}">See all starters!</a>
         </div>
     </div>    
     

@@ -4,13 +4,8 @@
 }
 
 hr{
-    width: 13vw;
-    border-color: #45510D;
+    width: 5vw;
 }
-
-/* #top-line{
-    width: 22vw;
-} */
 
 h1{
     font-size: 16px;
@@ -33,30 +28,27 @@ a{
 }
 nav{
     height: 75px;
-    background-color: #F6F8F2;
-    background-color: #F6F8F2;
-    background: -webkit-gradient(linear, left top, left bottom, from(#B4BA9A), to(#F6F8F2));
+    background-color: #d1cdc9;
+    /* background: -webkit-gradient(linear, left top, left bottom, from(#B4BA9A), to(#F6F8F2));
     background: -webkit-linear-gradient(top, #B4BA9A, #F6F8F2);
     background: -moz-linear-gradient(top, #B4BA9A, #F6F8F2);
     background: -ms-linear-gradient(top, #B4BA9A, #F6F8F2);
-    background: -o-linear-gradient(top, #B4BA9A, #F6F8F2);
+    background: -o-linear-gradient(top, #B4BA9A, #F6F8F2); */
 }
 
-
-
 footer{
-    background-color: #F6F8F2;
-    background: -webkit-gradient(linear, left top, left bottom, from(#B4BA9A), to(#F6F8F2));
+    background-color: #d1cdc9;
+    /* background: -webkit-gradient(linear, left top, left bottom, from(#B4BA9A), to(#F6F8F2));
     background: -webkit-linear-gradient(top, #B4BA9A, #F6F8F2);
     background: -moz-linear-gradient(top, #B4BA9A, #F6F8F2);
     background: -ms-linear-gradient(top, #B4BA9A, #F6F8F2);
-    background: -o-linear-gradient(top, #B4BA9A, #F6F8F2);
+    background: -o-linear-gradient(top, #B4BA9A, #F6F8F2); */
     height: 140px;
     width: 100vw;
     display: flex;
     flex-direction: column;
     font-family: 'Helvetica';
-    color: #45510D;
+    color: black;
 }
 
 .icon, .started{
@@ -79,6 +71,7 @@ footer{
     width: 100px;
     margin-right: 25px;
     font-weight: 200;
+    
 }
 
 .middle{
@@ -87,6 +80,7 @@ footer{
     display: flex;
     align-items: center;
     font-weight: 800;
+    margin-left: 25px;
 }
 
 .title-rise{
@@ -112,17 +106,20 @@ footer{
     width: 83vw;
     height: 50vh;
     padding-top: 15px;
-    /* background-color: greenyellow; */
+
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
 
+}
+
+.process-text{
+    margin-top: 25px;
 }
 
 .social{
     width: 100vw;
     height: 40vh;
-    /* background-color: aquamarine; */
+
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -132,7 +129,7 @@ footer{
     padding-left: 10px;
     width: 100vw;
     height: 10vh;
-    /* background-color: blue; */
+
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -143,7 +140,7 @@ footer{
 }
 
 li a {
-    color: #45510D;
+    color: black;
     font-size: 12px;
 }
 
@@ -166,9 +163,20 @@ li a {
     width: 140px;
 }
 
-h3.started, h3.intro{
+h3.intro{
     margin-bottom: 25px;
     margin-left: 20px;
+}
+
+.bread-button{
+    width: 120px;
+    height: 31px;
+    border: 2px solid black;
+    margin: 0 25px 50px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D4AC9C;
 }
 
 .about, .process, .tools{
@@ -200,7 +208,7 @@ h3.started, h3.intro{
     width: 50px;
     height: 50px;
     border-radius: 50px;
-    background-color: #B4BA9A;
+    background-color: #d2d9d9;
 } 
 
 .icon1-tools{
@@ -243,7 +251,8 @@ h3.started, h3.intro{
 
 .top-sect-day1, .top-sect-day2{
     display: flex;
-
+    background-color: #dad1c6;
+    height: 200px;
 }
 .step1, .media, .step2, .example-container{
     margin-top: 25px;
@@ -256,9 +265,6 @@ h3.started, h3.intro{
 .step-one-list{
     margin-top: 15px;
     list-style-type: disc;
-    margin-left: 25px;
-    padding-left: 10px;
-    
 }
 
 .step-two-ul{
@@ -280,7 +286,6 @@ h3.started, h3.intro{
 .bottom-sect-day1{
     display: flex;
     flex-direction: column;
-    background-color: #F5E1CB;
 
 }
 
@@ -325,8 +330,8 @@ h3.started, h3.intro{
 }
 
 .button {
-    border-top: 1px solid #45510d;
-    background: #45510d;
+    border-top: 1px solid #d4ac9c;
+    background: #d4ac9c;
     padding: 14px 28px;
     border-radius: 12px;
     box-shadow: rgba(0,0,0,1) 0 1px 0;
@@ -336,7 +341,7 @@ h3.started, h3.intro{
     font-family: "Helvetica";
     text-decoration: none;
     vertical-align: middle;
-    width: 100px;
+    width: 115px;
     height: 25px;
     display: flex;
     justify-content: center;
@@ -356,6 +361,98 @@ h3.started, h3.intro{
     display: none;
 }
 
+a.home-link {
+    font-size: 16px;
+}
+
+.none{
+    margin: 0;
+    padding: 0;
+}
+
+.tracker{
+    height: 50px;
+    background-color: #d2d9d9;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.box{
+    height: 48px;
+    width: 83px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box-details{
+    height: 48px;
+    width: 83px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.active{
+    border: 2px solid blueviolet;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+    width: 250px;
+    box-shadow: 7px 8px 13px 2px #ccc;
+    margin: 30px 0;
+    background-color: #d4ac9c;
+    border-radius: 10px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.flex-f{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    justify-content: space-around;
+    width: 100%;
+}
+
+.small-f{
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    background-image: url(https://i.imgur.com/sLOCXag.png);
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+}
+.small-i{
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    background-image: url(https://i.imgur.com/mueaML5.png);
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+}
+.small-t{
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    background-image: url(https://i.imgur.com/uOS0ilf.png);
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+}
 #s2-pic1 {
     background-image: url(https://i.imgur.com/qn38Qrb.jpg?1);
     background-repeat: no-repeat;
