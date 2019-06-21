@@ -92,3 +92,14 @@ input.btn{
     background-color: #d4ac9c;
     color: white;
 }
+
+.extra{
+  padding: 0;
+  width: 270px;
+}
+
+.less{
+  margin: 0;
+  padding: 14px;
+  background-color: #d2d9d9;
+}

@@ -77,11 +77,20 @@
                 </ol> 
             </div>
             <div class="step1-last">
-                <form action="{% url 'add_leaven' starter.id %}"  method="POST">
+                <div class="login-page extra">
+                    <div class="form less">
+                        <form class="login-form" method="post" action="{% url 'add_leaven' starter.id %}">
+                            {% csrf_token %}
+                            {{ leaven_form.as_p }}
+                            <input type="submit" class="btn" value="Next!">
+                        </form>
+                    </div>
+                </div>
+                <!-- <form action="{% url 'add_leaven' starter.id %}"  method="POST">
                     {% csrf_token %}
                     {{ leaven_form.as_p }}
                     <input type="submit" class="btn" value="Next!">
-                </form>
+                </form> -->
             </div>
         </section>
 {% endblock %}

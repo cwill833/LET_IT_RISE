@@ -91,7 +91,23 @@
             </ol>  
         </div>
         <div class="step1-last">
-            <form action=""  method="POST">
+                <div class="login-page extra">
+                    <div class="form less">
+                        <form class="login-form" method="post" action="">
+                            {% csrf_token %}
+                        <p>
+                            <label for="id_name">Batch Name:</label> 
+                            <input type="text" name="name" maxlength="100" required="" id="id_name">
+                        </p>
+                        <p>
+                            <label for="id_temp">Temp:</label> 
+                            <input type="text" name="temp" maxlength="100" required="" id="id_temp">
+                        </p>
+                            <input type="submit" class="btn" value="Next!">
+                        </form>
+                    </div>
+                </div>
+            <!-- <form action=""  method="POST">
                 {% csrf_token %}
                 <p>
                     <label for="id_name">Batch Name:</label> 
@@ -102,7 +118,7 @@
                     <input type="text" name="temp" maxlength="100" required="" id="id_temp">
                 </p>
                 <input type="submit" class="btn" value="Next!">
-            </form>
+            </form> -->
         </div>
     </section>
     {% endif %}
