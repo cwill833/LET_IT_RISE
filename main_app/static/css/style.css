@@ -455,20 +455,38 @@ a.home-link {
     background-repeat: no-repeat;
     background-size: 35px 35px;
 }
-#s2-pic1 {
-    background-image: url(https://i.imgur.com/dYF7ZZk.jpg);
+.s2-pic1 {
+    background-image: url(https://i.imgur.com/qn38Qrb.jpg?1);
     background-repeat: no-repeat;
     background-size: 75px 75px;
 }
 
-#s2-pic2 {
+.s2-pic2 {
     background-image: url(https://i.imgur.com/P9JtLOw.jpg);
     background-repeat: no-repeat;
     background-size: 75px 75px;
 }
 
-#s2-pic3 {
-    background-image: url(https://i.imgur.com/IrFgT4S.jpg);
+.s2-pic3 {
+    background-image: url(https://i.imgur.com/cgBHAvL.jpg?1);
+    background-repeat: no-repeat;
+    background-size: 75px 75px;
+}
+
+.s4-pic1 {
+    background-image: url(https://i.imgur.com/sjCV8t0.jpg?1);
+    background-repeat: no-repeat;
+    background-size: 75px 75px;
+}
+
+.s4-pic2 {
+    background-image: url(https://i.imgur.com/P9JtLOw.jpg);
+    background-repeat: no-repeat;
+    background-size: 75px 75px;
+}
+
+.s4-pic3 {
+    background-image: url(https://i.imgur.com/fEUfE61.jpg?1);
     background-repeat: no-repeat;
     background-size: 75px 75px;
 }
