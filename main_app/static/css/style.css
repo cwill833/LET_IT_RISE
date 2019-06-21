@@ -42,8 +42,6 @@ nav{
     background: -o-linear-gradient(top, #B4BA9A, #F6F8F2);
 }
 
-
-
 footer{
     background-color: #F6F8F2;
     background: -webkit-gradient(linear, left top, left bottom, from(#B4BA9A), to(#F6F8F2));
@@ -117,7 +115,10 @@ footer{
     display: flex;
     justify-content: space-between;
     /* align-items: center; */
+}
 
+.process-text{
+    margin-top: 25px;
 }
 
 .social{
@@ -257,9 +258,6 @@ h3.started, h3.intro{
 .step-one-list{
     margin-top: 15px;
     list-style-type: disc;
-    margin-left: 25px;
-    padding-left: 10px;
-    
 }
 
 .step-two-ul{
