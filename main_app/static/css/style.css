@@ -33,22 +33,21 @@ a{
 }
 nav{
     height: 75px;
-    background-color: #F6F8F2;
-    background-color: #F6F8F2;
-    background: -webkit-gradient(linear, left top, left bottom, from(#B4BA9A), to(#F6F8F2));
+    background-color: #d2d9d9;
+    /* background: -webkit-gradient(linear, left top, left bottom, from(#B4BA9A), to(#F6F8F2));
     background: -webkit-linear-gradient(top, #B4BA9A, #F6F8F2);
     background: -moz-linear-gradient(top, #B4BA9A, #F6F8F2);
     background: -ms-linear-gradient(top, #B4BA9A, #F6F8F2);
-    background: -o-linear-gradient(top, #B4BA9A, #F6F8F2);
+    background: -o-linear-gradient(top, #B4BA9A, #F6F8F2); */
 }
 
 footer{
-    background-color: #F6F8F2;
-    background: -webkit-gradient(linear, left top, left bottom, from(#B4BA9A), to(#F6F8F2));
+    background-color: #d2d9d9;
+    /* background: -webkit-gradient(linear, left top, left bottom, from(#B4BA9A), to(#F6F8F2));
     background: -webkit-linear-gradient(top, #B4BA9A, #F6F8F2);
     background: -moz-linear-gradient(top, #B4BA9A, #F6F8F2);
     background: -ms-linear-gradient(top, #B4BA9A, #F6F8F2);
-    background: -o-linear-gradient(top, #B4BA9A, #F6F8F2);
+    background: -o-linear-gradient(top, #B4BA9A, #F6F8F2); */
     height: 140px;
     width: 100vw;
     display: flex;
@@ -77,6 +76,7 @@ footer{
     width: 100px;
     margin-right: 25px;
     font-weight: 200;
+    
 }
 
 .middle{
@@ -168,9 +168,20 @@ li a {
     width: 140px;
 }
 
-h3.started, h3.intro{
+h3.intro{
     margin-bottom: 25px;
     margin-left: 20px;
+}
+
+.bread-button{
+    width: 120px;
+    height: 31px;
+    border: 2px solid black;
+    margin: 0 25px 50px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D4AC9C;
 }
 
 .about, .process, .tools{
@@ -245,7 +256,8 @@ h3.started, h3.intro{
 
 .top-sect-day1, .top-sect-day2{
     display: flex;
-
+    background-color: #dad1c6;
+    height: 200px;
 }
 .step1, .media, .step2, .example-container{
     margin-top: 25px;
@@ -279,7 +291,6 @@ h3.started, h3.intro{
 .bottom-sect-day1{
     display: flex;
     flex-direction: column;
-    background-color: #F5E1CB;
 
 }
 
@@ -324,8 +335,8 @@ h3.started, h3.intro{
 }
 
 .button {
-    border-top: 1px solid #45510d;
-    background: #45510d;
+    border-top: 1px solid #d4ac9c;
+    background: #d4ac9c;
     padding: 14px 28px;
     border-radius: 12px;
     box-shadow: rgba(0,0,0,1) 0 1px 0;
@@ -357,4 +368,29 @@ h3.started, h3.intro{
 
 a.home-link {
     font-size: 16px;
+}
+
+.none{
+    margin: 0;
+    padding: 0;
+}
+
+.tracker{
+    height: 50px;
+    background-color: #d2d9d9;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box{
+    height: 48px;
+    width: 83px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.active{
+    border: 2px solid blueviolet;
 }

@@ -9,6 +9,12 @@
 </form>
 
 {% else %}
+<div class="tracker">
+    <div class="box active">STARTER</div>
+    <div class="box">LEAVEN</div>
+    <div class="box">RISE</div>
+    <div class="box">BAKE</div>
+</div>
 <section class="top-sect-day2">
         <div class="step2">
             <h3>Step TWO</h3>
@@ -87,7 +93,14 @@
         <div class="step1-last">
             <form action=""  method="POST">
                 {% csrf_token %}
-                {{ form.as_p }}
+                <p>
+                    <label for="id_name">Batch Name:</label> 
+                    <input type="text" name="name" maxlength="100" required="" id="id_name">
+                </p>
+                <p>
+                    <label for="id_temp">Temp:</label> 
+                    <input type="text" name="temp" maxlength="100" required="" id="id_temp">
+                </p>
                 <input type="submit" class="btn" value="Next!">
             </form>
         </div>
