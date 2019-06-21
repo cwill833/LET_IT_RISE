@@ -92,41 +92,6 @@ def add_bake(request, starter_id):
     bake.save()
   return redirect('finished', starter_id=starter_id)
 
-def signup(request):
-  error_message = ''
-  if request.method == 'POST':
-    form = UserCreationForm(request.POST)
-    if form.is_valid():
-      user = form.save()
-      login(request, user)
-      return redirect('/')
-    else:
-      error_message = 'Invalid sign up - try again'
-  form = UserCreationForm()
-  context = {'form': form, 'error_message': error_message}
-  return render(request, 'registration/signup.html', context)
-
-def bakes_detail(request):
-  return render(request, 'bakes/detail.html') 
-
-def fermentations_detail(request):
-  return render(request, 'fermentations/detail.html')
-
-def trackers_index(request):
-  return render(request, 'trackers/detail.html')
-
-def tools(request):
-  return render(request, 'tools.html')
-
-def leavens_detail(request):
-  return render(request, 'leavens/detail.html')
-
-def mixes_detail(request):
-  return render(request, 'mixes/detail.html')
-
-def shapes_detail(request):
-  return render(request, 'shapes/detail.html')
-
 @login_required
 def finished(request, starter_id):
   starter = Starter.objects.get(id=starter_id)
@@ -168,3 +133,17 @@ class StarterUpdate(LoginRequiredMixin, UpdateView):
 class StarterDelete(LoginRequiredMixin, DeleteView):
   model = Starter
   success_url = '/index/'
+
+def signup(request):
+  error_message = ''
+  if request.method == 'POST':
+    form = UserCreationForm(request.POST)
+    if form.is_valid():
+      user = form.save()
+      login(request, user)
+      return redirect('/')
+    else:
+      error_message = 'Invalid sign up - try again'
+  form = UserCreationForm()
+  context = {'form': form, 'error_message': error_message}
+  return render(request, 'registration/signup.html', context)
