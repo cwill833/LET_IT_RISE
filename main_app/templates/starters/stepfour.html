@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="tracker">
-    <div class="box">STARTER</div>
-    <div class="box active">LEAVEN</div>
-    <div class="box">RISE</div>
-    <div class="box">BAKE</div>
+    <div class="box class="arial"">STARTER</div>
+    <div class="box active class="arial"">LEAVEN</div>
+    <div class="box class="arial"">RISE</div>
+    <div class="box class="arial"">BAKE</div>
 </div>
 <section class="top-sect-day2">
     <div class="step2">
-        <h3>Step FOUR</h3>
+        <h3 class="arial">Step FOUR</h3>
     </div>
     <div class="example-container">
         <div id="pic1" class="s4-pic1 examples">
@@ -22,25 +22,25 @@
         </div>
     </div>
 </section>
-    <div class="upload-container">
+    <!-- <div class="upload-container">
         <div class="upload">
-            <p>upload image here!</p>
+            <p class="arial">upload image here!</p>
         </div>
-    </div>
+    </div> -->
 </section>
 <section id="default_text" class="bottom-sect-day1">
         <div class="step1-text">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugiat voluptatum ex labore odit doloribus aut necessitatibus eos rem ullam dolorum laboriosam, placeat totam quibusdam at recusandae enim sint aliquam?</p>
+            <p class="arial">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum fugiat voluptatum ex labore odit doloribus aut necessitatibus eos rem ullam dolorum laboriosam, placeat totam quibusdam at recusandae enim sint aliquam?</p>
         </div>
     </section>
     
     <section id="pic1_text" class="bottom-sect-day1">
         <div class="step1-text">
             <ol>
-                <li>WAIT</li>
+                <li class="arial">WAIT</li>
                 <ul class="step-two-ul">
-                    <li>Your leaven needs more time to ferment.</li>
-                    <li>Let it sit for one hour.</li>
+                    <li class="arial">Your leaven needs more time to ferment.</li>
+                    <li class="arial">Let it sit for one hour.</li>
                 </ul>
             </ol>  
         </div>
@@ -49,14 +49,14 @@
     <section id="pic2_text" class="bottom-sect-day1">
         <div class="step1-text">
             <ol start="2">
-                <li>Over Fermented</li>
+                <li class="arial">Over Fermented</li>
                 <ul class="step-two-ul">
-                    <li>Your leaven has over fermented.</li>
-                    <li>Add 25g of whole wheat flour, 25g white flour, 50g of filtered water to your starter.</li>
-                    <li>Mix it all together using your hands.</li>
-                    <li>Use your dough spatula to scrape off the dough on your hands into the bowl.</li>
-                    <li>Then clean off the sides of the bowl.</li>
-                    <li>Let it sit for one hour.</li>
+                    <li class="arial">Your leaven has over fermented.</li>
+                    <li class="arial">Add 25g of whole wheat flour, 25g white flour, 50g of filtered water to your starter.</li>
+                    <li class="arial">Mix it all together using your hands.</li>
+                    <li class="arial">Use your dough spatula to scrape off the dough on your hands into the bowl.</li>
+                    <li class="arial">Then clean off the sides of the bowl.</li>
+                    <li class="arial">Let it sit for one hour.</li>
                 </ul>
             </ol> 
         </div>
@@ -64,22 +64,22 @@
     <section id="pic3_text" class="bottom-sect-day1">
             <div class="step1-text">
                 <ol start="3">
-                    <li>READY!</li>
+                    <li class="arial">READY!</li>
                     <ul class="step-two-ul">
-                        <li>Your leaven is ready.</li>
-                        <li>In a large mixing bowl add 700g of warm filter water (80ºF)</li>
-                        <li>Add 200g of your leaven into the bowl and stir it together.</li>
-                        <li>Add 900g of white flour, 100g of whole wheat flour, and 20g of salt.</li>
-                        <li>Mix everything together by hand until no bits of dry flour remain.</li>
-                        <li>Place a damp kitchen towel over the bowl.</li>
-                        <li>It is now time for the dough to do its first rise (fermentation). Let it sit for 30 minutes.</li>
+                        <li class="arial">Your leaven is ready.</li>
+                        <li class="arial">In a large mixing bowl add 700g of warm filter water (80ºF)</li>
+                        <li class="arial">Add 200g of your leaven into the bowl and stir it together.</li>
+                        <li class="arial">Add 900g of white flour, 100g of whole wheat flour, and 20g of salt.</li>
+                        <li class="arial">Mix everything together by hand until no bits of dry flour remain.</li>
+                        <li class="arial">Place a damp kitchen towel over the bowl.</li>
+                        <li class="arial">It is now time for the dough to do its first rise (fermentation). Let it sit for 30 minutes.</li>
                     </ul>
                 </ol> 
             </div>
             <div class="step1-last">
                 <div class="login-page extra">
                     <div class="form less">
-                        <form class="login-form" method="post" action="{% url 'add_leaven' starter.id %}">
+                        <form class="login-form arial" method="post" action="{% url 'add_leaven' starter.id %}">
                             {% csrf_token %}
                             {{ leaven_form.as_p }}
                             <input type="submit" class="btn" value="Next!">

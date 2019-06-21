@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="tracker">
-    <div class="box">STARTER</div>
-    <div class="box">LEAVEN</div>
-    <div class="box active">RISE</div>
-    <div class="box">BAKE</div>
+    <div class="box arial">STARTER</div>
+    <div class="box arial">LEAVEN</div>
+    <div class="box active arial">RISE</div>
+    <div class="box arial">BAKE</div>
 </div>
 
 <section class="top-sect-day1">
     <div class="step1">
-        <h3>Step FIVE</h3>
+        <h3 class="arial">Step FIVE</h3>
     </div>
     <div class="media" id="s5-pic">
 
@@ -19,11 +19,11 @@
 
 <section class="bottom-sect-day1">
     <div class="step1-text">
-        <p>Your bread is now in the bulk rise process. You will start to see it growing as the yeast ferments inside your dough. This step is when the bubbles are created. If your bread, after baking, is flat and does not have bubbles it maybe because you did not let it rise long enough.</p>
+        <p class="arial">Your bread is now in the bulk rise process. You will start to see it growing as the yeast ferments inside your dough. This step is when the bubbles are created. If your bread, after baking, is flat and does not have bubbles it maybe because you did not let it rise long enough.</p>
     </div>
     <div class="step1-last">
         <div class="button">
-            <a href="{% url 'stepsix' starter.id %}">NEXT!</a>
+            <a href="{% url 'stepsix' starter.id %}" class="arial">NEXT!</a>
         </div>
     </div>
 

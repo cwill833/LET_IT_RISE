@@ -14,14 +14,14 @@
 
 {% else %}
 <div class="tracker">
-    <div class="box active">STARTER</div>
-    <div class="box">LEAVEN</div>
-    <div class="box">RISE</div>
-    <div class="box">BAKE</div>
+    <div class="box active arial">STARTER</div>
+    <div class="box arial">LEAVEN</div>
+    <div class="box arial">RISE</div>
+    <div class="box arial">BAKE</div>
 </div>
 <section class="top-sect-day2">
         <div class="step2">
-            <h3>Step TWO</h3>
+            <h3 arial>Step TWO</h3>
         </div>
         <div class="example-container">
             <div id="pic1" class="s2-pic1 examples">
@@ -35,62 +35,62 @@
             </div>
         </div>
     </section>
-        <div class="upload-container">
+        <!-- <div class="upload-container">
             <div class="upload">
                 <p>upload image here!</p>
             </div>
-        </div>
+        </div> -->
 
     <section id="default_text" class="bottom-sect-day1">
         <div class="step1-text">
-            <p>Hello! Click on the photo that best matches your dough.</p>
+            <p class="arial">Hello! Click on the photo that best matches your dough.</p>
         </div>
     </section>
     
     <section id="pic1_text" class="bottom-sect-day1">
         <div class="step1-text">
           <ol>
-              <li>Stir</li>
-              <ul class="step-two-ul">
-                  <li>Use your hands to mix up your starter.</li>
-                  <li>Use your dough spatula to scrape off the dough on your hands into the bowl.</li>
-                  <li>Then clean off the sides of the bowl.</li>
-                  <li>Put a kitchen towel over your bowl and place the bowl in a shaded place in your kitchen</li>
+              <li class="arial">Stir</li>
+              <ul class="step-two-ul arial">
+                  <li class="arial">Use your hands to mix up your starter.</li>
+                  <li class="arial">Use your dough spatula to scrape off the dough on your hands into the bowl.</li>
+                  <li class="arial">Then clean off the sides of the bowl.</li>
+                  <li class="arial">Put a kitchen towel over your bowl and place the bowl in a shaded place in your kitchen</li>
               </ul>
           </ol>  
-          <p>Let the starter sit until tomorrow morning.</p>
+          <p class="arial">Let the starter sit until tomorrow morning.</p>
         </div>
     </section>
     
     <section id="pic2_text" class="bottom-sect-day1">
         <div class="step1-text">
             <ol start="2">
-                <li>Feed</li>
-                <ul class="step-two-ul">
-                    <li>Use your dough spatula to scoop out 80% of your starter into the trash</li>
-                    <li>Add 25g of whole wheat flour, 25g white flour, and 50g of filtered water to your starter.</li>
-                    <li>Mix it all together with your hands.</li>
-                    <li>Use your dough spatula to scrape off the dough on your hands into the bowl.</li>
-                    <li>Then clean off the sides of the bowl.</li>
-                    <li>Put a kitchen towel over your bowl and place the bowl in a shaded place in your kitchen</li>
+                <li class="arial">Feed</li>
+                <ul class="step-two-ul arial">
+                    <li class="arial">Use your dough spatula to scoop out 80% of your starter into the trash</li>
+                    <li class="arial">Add 25g of whole wheat flour, 25g white flour, and 50g of filtered water to your starter.</li>
+                    <li class="arial">Mix it all together with your hands.</li>
+                    <li class="arial">Use your dough spatula to scrape off the dough on your hands into the bowl.</li>
+                    <li class="arial">Then clean off the sides of the bowl.</li>
+                    <li class="arial">Put a kitchen towel over your bowl and place the bowl in a shaded place in your kitchen</li>
                 </ul>
             </ol>  
-            <p>Now we will let are starter sit until after dinner.</p>
+            <p class="arial">Now we will let are starter sit until after dinner.</p>
         </div>
     </section>
     
     <section id="pic3_text" class="bottom-sect-day1">
         <div class="step1-text">
             <ol start="3">
-                <li>READY!</li>
+                <li class="arial">READY!</li>
                 <ul class="step-two-ul">
-                    <li>Your starter is now ready! We can use it to make our leaven. If you do not have the time to bake wait until tomorrow morning and feed your starter again. Otherwise, let's get started.</li>
-                    <li>Before going to bed take 20g of your starter add place it into a bowl.</li>
-                    <li>Add 100g of whole wheat flour, 100g of white flour, and 200g of warm water (78ºF).</li>
-                    <li>Mix it all together using your hands.</li>
-                    <li>Use your dough spatula to scrape off the dough on your hands into the bowl.</li>
-                    <li>Then clean off the sides of the bowl.</li>
-                    <li>Put a kitchen towel over your bowl and place the bowl in a shaded place in your kitchen overnight.</li>
+                    <li class="arial">Your starter is now ready! We can use it to make our leaven. If you do not have the time to bake wait until tomorrow morning and feed your starter again. Otherwise, let's get started.</li>
+                    <li class="arial">Before going to bed take 20g of your starter add place it into a bowl.</li>
+                    <li class="arial">Add 100g of whole wheat flour, 100g of white flour, and 200g of warm water (78ºF).</li>
+                    <li class="arial">Mix it all together using your hands.</li>
+                    <li class="arial">Use your dough spatula to scrape off the dough on your hands into the bowl.</li>
+                    <li class="arial">Then clean off the sides of the bowl.</li>
+                    <li class="arial">Put a kitchen towel over your bowl and place the bowl in a shaded place in your kitchen overnight.</li>
                 </ul>
             </ol>  
         </div>
@@ -100,11 +100,11 @@
                         <form class="login-form" method="post" action="">
                             {% csrf_token %}
                         <p>
-                            <label for="id_name">Batch Name:</label> 
+                            <label for="id_name" class="arial">Batch Name:</label> 
                             <input type="text" name="name" maxlength="100" required="" id="id_name">
                         </p>
                         <p>
-                            <label for="id_temp">Temp:</label> 
+                            <label for="id_temp" class="arial">Temp:</label> 
                             <input type="text" name="temp" maxlength="100" required="" id="id_temp">
                         </p>
                             <input type="submit" class="btn" value="Next!">

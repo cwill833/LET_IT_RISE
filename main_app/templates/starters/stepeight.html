@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="tracker">
-    <div class="box">STARTER</div>
-    <div class="box">LEAVEN</div>
-    <div class="box">RISE</div>
-    <div class="box active">BAKE</div>
+    <div class="box arial">STARTER</div>
+    <div class="box arial">LEAVEN</div>
+    <div class="box arial">RISE</div>
+    <div class="box active arial">BAKE</div>
 </div>
 
 <section class="top-sect-day1">
     <div class="step1">
-        <h3>Step EIGHT</h3>
+        <h3 class="arial">Step EIGHT</h3>
     </div>
     <div class="media" id="s8-pic">
 
@@ -20,20 +20,20 @@
 <section class="bottom-sect-day1">
     <div class="step1-text">
         <ul class="step-two-ul">
-            <li>Place your dutch oven (both pot and lid) into the oven and preheat the oven to 500ºF.</li>
-            <li>Dust one of your loaves in your baskets with rice flour.</li>
-            <li>Once the oven is preheated take out the dutch oven.</li>
-            <li>Flip the loaf into the pan of the dutch oven so that the floured side is down.</li>
-            <li>Using a serrated knife cut a square on the top of your loaf.</li>
-            <li>Place the lid of the dutch oven top and return both to the oven.</li>
-            <li>Bake your bread at 450ºF for 20 minutes.</li>
-            <li>After 20 minutes, remove the lid of the dutch oven and bake for 20 more minutes.</li>
+            <li class="arial">Place your dutch oven (both pot and lid) into the oven and preheat the oven to 500ºF.</li>
+            <li class="arial">Dust one of your loaves in your baskets with rice flour.</li>
+            <li class="arial">Once the oven is preheated take out the dutch oven.</li>
+            <li class="arial">Flip the loaf into the pan of the dutch oven so that the floured side is down.</li>
+            <li class="arial">Using a serrated knife cut a square on the top of your loaf.</li>
+            <li class="arial">Place the lid of the dutch oven top and return both to the oven.</li>
+            <li class="arial">Bake your bread at 450ºF for 20 minutes.</li>
+            <li class="arial">After 20 minutes, remove the lid of the dutch oven and bake for 20 more minutes.</li>
         </ul>
     </div>
     <div class="step1-last">
         <div class="login-page extra">
             <div class="form less">
-                <form class="login-form" method="post" action="{% url 'add_bake' starter.id %}">
+                <form class="login-form arial" method="post" action="{% url 'add_bake' starter.id %}">
                     {% csrf_token %}
                     {{ bake_form.as_p }}
                     <input type="submit" class="btn" value="Next!">

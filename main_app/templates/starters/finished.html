@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="tracker">
-    <div class="box">COMPLETE</div>
+    <div class="box arial">COMPLETE</div>
 
 </div>
 
@@ -15,45 +15,45 @@
 </section>
 <div class="bottom-sect flex">
         <div class="flex-f grid">
-            <div>Starter</div>
+            <div class="arial">Starter</div>
             <div>
                 <ul>
-                    <li>Name of Batch: {{ starter.name }}</li>
-                    <li>Temperature: {{ starter.temp }}</li>
+                    <li class="arial">Name of Batch: {{ starter.name }}</li>
+                    <li class="arial">Temperature: {{ starter.temp }}</li>
                 </ul>
             </div>
         </div>
         <div class="flex-f grid">
-            <div>Leaven</div>
+            <div class="arial">Leaven</div>
             <div>
                 <ul>
-                    <li>Temperature while rising: {{ leaven.temp }}</li>
-                    <li>Fermentation time: {{ leaven.time }}</li>
+                    <li class="arial">Temperature while rising: {{ leaven.temp }}</li>
+                    <li class="arial">Fermentation time: {{ leaven.time }}</li>
                 </ul>
             </div>
         </div>
         <div class="flex-f grid">
-            <div>Rise</div>
+            <div class="arial">Rise</div>
             <div>
                 <ul>
-                    <li>Temperature when rising: {{ rise.temp }}</li>
-                    <li>Time spent on rising: {{ rise.time }}</li>
+                    <li class="arial">Temperature when rising: {{ rise.temp }}</li>
+                    <li class="arial">Time spent on rising: {{ rise.time }}</li>
                 </ul>
             </div>
         </div>
         <div class="flex-f grid">
-            <div>Bake</div>
+            <div class="arial">Bake</div>
             <div>
                 <ul>
-                    <li>Temperature when baking: {{ bake.temp }}</li>
-                    <li>Time spent baking: {{ bake.time }}</li>
+                    <li class="arial">Temperature when baking: {{ bake.temp }}</li>
+                    <li class="arial">Time spent baking: {{ bake.time }}</li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="step1-last">
         <div class="button">
-            <a href="{% url 'index' %}">See all starters!</a>
+            <a href="{% url 'index' %}" class="arial">See all starters!</a>
         </div>
     </div>    
     

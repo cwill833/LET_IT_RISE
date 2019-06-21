@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="tracker">
-    <div class="box">STARTER</div>
-    <div class="box active">LEAVEN</div>
-    <div class="box">RISE</div>
-    <div class="box">BAKE</div>
+    <div class="box arial">STARTER</div>
+    <div class="box active arial">LEAVEN</div>
+    <div class="box arial">RISE</div>
+    <div class="box arial">BAKE</div>
 </div>
 <section class="top-sect-day1">
     <div class="step1">
-        <h3>Step THREE</h3>
+        <h3 class="arial">Step THREE</h3>
     </div>
     <div class="media" id="s3-pic">
 
@@ -18,11 +18,11 @@
 
 <section class="bottom-sect-day1">
     <div class="step1-text">
-        <p>The leave is a very important part of the baking process, much of the bread flavor will be determined by your leaven. The best way to tell if your leaven is ready is if it will float in water. Just scoop out one spoon full of leaven when you are ready to test it.</p>
+        <p class="arial">The leave is a very important part of the baking process, much of the bread flavor will be determined by your leaven. The best way to tell if your leaven is ready is if it will float in water. Just scoop out one spoon full of leaven when you are ready to test it.</p>
     </div>
     <div class="step1-last">
         <div class="button">
-            <a href="{% url 'stepfour' starter.id %}">NEXT!</a>
+            <a href="{% url 'stepfour' starter.id %}" class="arial">NEXT!</a>
         </div>
     </div>
 

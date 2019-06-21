@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="tracker">
-    <div class="box">STARTER</div>
-    <div class="box">LEAVEN</div>
-    <div class="box active">RISE</div>
-    <div class="box">BAKE</div>
+    <div class="box arial">STARTER</div>
+    <div class="box arial">LEAVEN</div>
+    <div class="box active arial">RISE</div>
+    <div class="box arial">BAKE</div>
 </div>
 
 <section class="top-sect-day1">
     <div class="step1">
-        <h3>Step SIX</h3>
+        <h3 class="arial">Step SIX</h3>
     </div>
     <div class="media" id="s6-pic">
 
@@ -19,19 +19,19 @@
 
 <section class="bottom-sect-day1">
     <div class="step1-text">
-        <p>The rise will take around four hours to be complete. After your dough has been sitting out for 30 minutes it is now time to do our first turn. Instead of kneading the dough we will be giving the dough a “turn” every 30 minutes.</p>
+        <p class="arial">The rise will take around four hours to be complete. After your dough has been sitting out for 30 minutes it is now time to do our first turn. Instead of kneading the dough we will be giving the dough a “turn” every 30 minutes.</p>
         <ul class="step-two-ul">
-            <li>Dip one hand into the water to prevent it from sticking to the dough.</li>
-            <li>Grab the underside of the dough, stretch it up and fold it over itself gently.</li>
-            <li>Repeat this turning and folding action three more times.</li>
-            <li>Then let it sit for 30 more minutes.</li>
+            <li class="arial">Dip one hand into the water to prevent it from sticking to the dough.</li>
+            <li class="arial">Grab the underside of the dough, stretch it up and fold it over itself gently.</li>
+            <li class="arial">Repeat this turning and folding action three more times.</li>
+            <li class="arial">Then let it sit for 30 more minutes.</li>
         </ul>
-        <p>Now that your bread has been rising for three hours let's check if the fermentation process is complete.</p>
+        <p class="arial">Now that your bread has been rising for three hours let's check if the fermentation process is complete.</p>
     </div>
     <div class="step1-last">
         <div class="login-page extra">
             <div class="form less">
-                <form class="login-form" method="post" action="{% url 'add_rise' starter.id %}">
+                <form class="login-form arial" method="post" action="{% url 'add_rise' starter.id %}">
                     {% csrf_token %}
                     {{ rise_form.as_p }}
                     <input type="submit" class="btn" value="Next!">
