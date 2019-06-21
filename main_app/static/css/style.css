@@ -453,3 +453,93 @@ a.home-link {
     background-repeat: no-repeat;
     background-size: 35px 35px;
 }
+#s2-pic1 {
+    background-image: url(https://i.imgur.com/dYF7ZZk.jpg);
+    background-repeat: no-repeat;
+    background-size: 75px 75px;
+}
+
+#s2-pic2 {
+    background-image: url(https://i.imgur.com/P9JtLOw.jpg);
+    background-repeat: no-repeat;
+    background-size: 75px 75px;
+}
+
+#s2-pic3 {
+    background-image: url(https://i.imgur.com/IrFgT4S.jpg);
+    background-repeat: no-repeat;
+    background-size: 75px 75px;
+}
+
+#s1-pic{
+    width: 250px;
+    height: 150px;
+    background-color: aqua;
+    background-image: url(https://i.imgur.com/FR3SvM4.jpg?2);
+    background-repeat: no-repeat;
+    background-size: 250px 150px;
+}
+
+#s3-pic{
+    width: 250px;
+    height: 150px;
+    background-color: aqua;
+    background-image: url(https://i.imgur.com/Eb7bmHP.jpg?1);
+    background-repeat: no-repeat;
+    background-size: 250px 150px;
+}
+
+#s5-pic{
+    width: 250px;
+    height: 150px;
+    background-color: aqua;
+    background-image: url(https://i.imgur.com/l5sF5CD.jpg?2);
+    background-repeat: no-repeat;
+    background-size: 250px 150px;
+}
+
+#s6-pic{
+    width: 250px;
+    height: 150px;
+    background-color: aqua;
+    background-image: url(https://i.imgur.com/VyTE6gF.jpg?2);
+    background-repeat: no-repeat;
+    background-size: 250px 150px;
+}
+
+#s7-pic{
+    width: 250px;
+    height: 150px;
+    background-color: aqua;
+    background-image: url(https://i.imgur.com/oWNWFIs.jpg?1);
+    background-repeat: no-repeat;
+    background-size: 250px 150px;
+}
+
+#s8-pic{
+    width: 250px;
+    height: 150px;
+    background-color: aqua;
+    background-image: url(https://i.imgur.com/fk4jrnA.jpg?1);
+    background-repeat: no-repeat;
+    background-size: 250px 150px;
+}
+
+#sf-pic{
+    width: 250px;
+    height: 150px;
+    background-color: aqua;
+    background-image: url(https://i.imgur.com/MqZWvNN.jpg?2);
+    background-repeat: no-repeat;
+    background-size: 250px 150px;
+}
+
+#sd-pic{
+    width: 250px;
+    height: 150px;
+    background-color: aqua;
+    background-image: url(https://i.imgur.com/IeKnwDO.jpg?1);
+    background-repeat: no-repeat;
+    background-size: 250px 150px;
+}
+
